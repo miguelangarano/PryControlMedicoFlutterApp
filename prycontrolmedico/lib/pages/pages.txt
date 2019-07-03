@@ -1,0 +1,1 @@
+En esta carpeta deben ir las pantalles de cada tarea donde se van a integrar los componentes.
