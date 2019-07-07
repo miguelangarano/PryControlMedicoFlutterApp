@@ -38,14 +38,17 @@ class PushNotificationProvider{
         print('============== On Launch ==============');
         print(info);
 
+        final noti = info['data']['medicamento'];
+        _mensajesStreamController.sink.add(noti);
+
       },
 
       onResume: ( info ) {
         print('============== On Resume ==============');
         print(info);
 
-        // final medicamento = info['data']['medicamento'];
-        // print(medicamento);
+        final noti = info['data']['medicamento'];
+        _mensajesStreamController.sink.add(noti);
 
       },
 
