@@ -17,7 +17,8 @@ class PushNotificationProvider{
     _firebaseMessaging.getToken().then( (token) {
       print('===== FCM Token =====');
       print( token );
-      // efuKR7wpo50:APA91bH3H3FegRGuyEQQP0v2NXtOhL0YPCwmcuLVDGEtd407bZSl4lgysoIDGwOQwvW5UPC6V-OOTkxUbXxnOSRYCiXFeZWk-1h4u81KC3TnhQiywC3I4Ld5IwWz2tYFaixNV4M8MSQ9
+      // efuKR7wpo50:APA91bH3H3FegRGuyEQQP0v2NXtOhL0YPCwmcuLVDGEtd407bZSl4lgysoIDGwOQwvW5UPC6V-OOTkxUbXxnOSRYCiXFeZWk-1h4u81KC3TnhQiywC3I4Ld5IwWz2tYFaixNV4M8MSQ9 < Emulador
+      // e-1jIZAODSc:APA91bG97CpZtLTlJmjwo1Q73YTT07Itkxatu9LblaFCLdGP9cPgcobS85R7s9qlxFAFnCDiVR2rID5Qboz3V-Swn5LBguUsSZylrdrH6vPhPJm4qP1VtVKOT4cuB25p1vcz1C5g4ZfL < Android Fisico
     });
 
     _firebaseMessaging.configure(
@@ -38,8 +39,8 @@ class PushNotificationProvider{
         print('============== On Launch ==============');
         print(info);
 
-        final noti = info['data']['medicamento'];
-        _mensajesStreamController.sink.add(noti);
+        // final noti = info['data']['medicamento'];
+        // _mensajesStreamController.sink.add(noti);
 
       },
 
