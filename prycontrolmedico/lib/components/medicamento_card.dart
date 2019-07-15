@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import '../entites/paciente.dart';
+import '../entites/medicamento.dart';
 import '../pages/scale_route.dart';
-import '../pages/medicamentos.dart';
+import '../pages/dosis.dart';
 
-class PacienteCard extends StatelessWidget {
 
-  PacienteCard(this.listaPacientes, this.index, this.url);
+class MedicamentoCard extends StatelessWidget {
 
-  List<Paciente> listaPacientes;
+  MedicamentoCard(this.listaMedicamentos, this.index, this.url);
+
+  List<Medicamento> listaMedicamentos;
   int index;
   String url;
 
@@ -30,7 +31,7 @@ class PacienteCard extends StatelessWidget {
       onTap: (){
         Navigator.push(
             context,
-            ScaleRoute(page: Medicamentos(listaPacientes[index].id, url))
+            ScaleRoute(page: DosisPage(listaMedicamentos[index].id, url))
         );
       },
       child: Container(
@@ -53,13 +54,13 @@ class PacienteCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Text(listaPacientes[index].cedula, style: TextStyle(fontSize: 30, color: Colors.black),),
-                Icon(Icons.face, color: Color.fromRGBO(0, 164, 174, 1), size: 50,)
+                Text(listaMedicamentos[index].nombreComercial, style: TextStyle(fontSize: 30, color: Colors.black),),
+                Icon(Icons.healing, color: Color.fromRGBO(0, 164, 174, 1), size: 50,)
               ],
             ),
             Padding(padding: EdgeInsets.only(top: 20),),
-            Text(listaPacientes[index].nombres, style: TextStyle(fontSize: 25, color: Colors.black),),
-            Text(listaPacientes[index].apellidos, style: TextStyle(fontSize: 25, color: Colors.black),),
+            Text(listaMedicamentos[index].componenteActivo, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 25, color: Colors.black),),
+            Text(listaMedicamentos[index].concentracion, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 25, color: Colors.black),),
           ],
         ),
       ),

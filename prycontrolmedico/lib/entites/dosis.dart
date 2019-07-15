@@ -1,9 +1,10 @@
 class Dosis{
   int id;
-  String fecha;
-  String hora;
+  String fechaHora;
   String descripcion;
-  String descripcionestado;
+  int descripcionestado;
+  String descripcionestadoDosis;
 
-  Dosis(this.id, this.fecha, this.hora, this.descripcion, this.descripcionestado);
+  Dosis(this.id, this.fechaHora, this.descripcion, this.descripcionestado,this.descripcionestadoDosis);
+
 }
